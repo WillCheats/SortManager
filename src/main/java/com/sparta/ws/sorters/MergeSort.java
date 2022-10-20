@@ -1,4 +1,4 @@
-package com.sparta.ws;
+package com.sparta.ws.sorters;
 
 import java.util.Random;
 
@@ -56,8 +56,8 @@ public class MergeSort {
         }
     }
         public static void numberGen(){
-            int number = 0;
-            number = inputNumbers.returns();
+            System.out.println("Merge sort entered");
+            int number = inputNumbers.returns();
             long startTime1 = System.nanoTime();
             int array[] = new int[number];
             for(int i = 0; i < number; i++)

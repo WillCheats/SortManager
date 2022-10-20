@@ -3,6 +3,7 @@ package com.sparta.ws;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertTrue;
 
+import com.sparta.ws.sorters.MergeSort;
 import org.junit.Test;
 
 

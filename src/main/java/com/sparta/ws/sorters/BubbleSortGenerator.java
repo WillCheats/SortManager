@@ -1,10 +1,11 @@
-package com.sparta.ws;
+package com.sparta.ws.sorters;
 import java.util.*;
 public class BubbleSortGenerator {
 
 
     public static void bubbleSort2()
     {
+        System.out.println("Bubble sort entered");
         int result1= inputNumbers.returns();
         long startTime = System.nanoTime();
         int array[] = new int[result1];
@@ -31,11 +32,4 @@ public class BubbleSortGenerator {
         long stopTime = System.nanoTime();
         System.out.println("Time taken: " + (stopTime - startTime)+ " nano seconds");
     }
-
-
-
-
-
-
-
 }

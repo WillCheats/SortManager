@@ -1,4 +1,4 @@
-package com.sparta.ws;
+package com.sparta.ws.sorters;
 
 import java.util.Scanner;
 
