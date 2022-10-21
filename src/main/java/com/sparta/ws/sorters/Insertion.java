@@ -1,50 +1,53 @@
 package com.sparta.ws.sorters;
+
 import com.sparta.ws.logger.LoggerClass;
 
 import java.io.IOException;
-import java.util.*;
-public class BubbleSortGenerator {
+import java.util.Arrays;
+import java.util.Random;
 
-
-    public static void bubbleSort2()
+public class Insertion {
+    public static void insertionSort()
     {
-        System.out.println("Bubble sort entered");
-        int result1= inputNumbers.returns();
+        System.out.println("Insertion sort entered");
+        int number = inputNumbers.returns();
         long startTime = System.nanoTime();
-        int array[] = new int[result1];
-
-        for(int i = 0; i < result1; i++)
+        int array[] = new int[number];
+        for(int i = 0; i < number; i++)
         {
             Random rand = new Random();
             array[i] = rand.nextInt(1000);
         }
-        System.out.println(Arrays.toString(array));
-        String message = "Bubble sort array created";
+        System.out.println("Array:");
+        MergeSort.printArray(array);
+        String message = "Insertion sort array created";
         try {
             LoggerClass.Logger1(message);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        for(int i = 0; i < array.length-1; i++)
-        {
-            for(int j = 0; j < array.length-1; j++)
+
+        int size = array.length;
+        for (int step = 1; step < size; step++) {
+            int key = array[step];
+            int j = step - 1;
+            while (j >= 0 && key < array[j])
             {
-                if(array[j] > array[j+1])
-                {
-                    int temp = array[j];
-                    array[j] = array[j+1];
-                    array[j+1] = temp;
-                }
+                array[j + 1] = array[j];
+                --j;
             }
+            array[j + 1] = key;
         }
         System.out.println(Arrays.toString(array));
         long stopTime = System.nanoTime();
         System.out.println("Time taken: " + (stopTime - startTime)+ " nano seconds");
-        message = "Bubble sort array sorted";
+       message = "Insertion sort array sorted ";
         try {
             LoggerClass.Logger1(message);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
+
+
 }

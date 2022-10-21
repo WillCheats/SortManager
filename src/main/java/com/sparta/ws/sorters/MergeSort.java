@@ -1,5 +1,8 @@
 package com.sparta.ws.sorters;
 
+import com.sparta.ws.logger.LoggerClass;
+
+import java.io.IOException;
 import java.util.Random;
 
 public class MergeSort {
@@ -67,11 +70,23 @@ public class MergeSort {
             }
             System.out.println("Array:");
             printArray(array);
+            String message = "Merge sort Array created" ;
+            try {
+                LoggerClass.Logger1(message);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
             MergeSort.mergeSort(array, 0, number-1);
             System.out.println("Sorted array:");
             printArray(array);
             long stopTime1 = System.nanoTime();
             System.out.println("Time taken: " + (stopTime1 - startTime1)+ " nano seconds");
+            message = "Merge sort Array sorted";
+            try {
+                LoggerClass.Logger1(message);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
 
    public static void mergeSort(int array[], int l, int r)
@@ -86,7 +101,7 @@ public class MergeSort {
     }
 
 
-    static void printArray(int array[])
+    public static void printArray(int array[])
     {
         int n = array.length;
         for (int i = 0; i < n; ++i)
