@@ -61,11 +61,7 @@ public class BinaryTreeInsert
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
-//                try {
-//                    LoggerClass.Logger1(message);
-//                } catch (IOException e) {
-//                    throw new RuntimeException(e);
-//                }
+
                 node.left = new Node(value);
             }
         }
