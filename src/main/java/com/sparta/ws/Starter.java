@@ -9,6 +9,8 @@ public class Starter {
         {
             System.out.println("What do you want to go to?" +
                     "\n 'bubble' for bubble sort" +
+                    "\n BTA for binary tree ascending"+
+                    "\n BTD for binary tree descending" +
                     "\n 'merge' for merge sort");
             Scanner kb = new Scanner(System.in);
             String answer = kb.nextLine();

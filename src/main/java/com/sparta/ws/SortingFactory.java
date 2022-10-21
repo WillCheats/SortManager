@@ -14,6 +14,12 @@ public class SortingFactory {
             case "merge":
                 MergeSort.numberGen();
                 return true;
+            case "BTA":
+
+                return true;
+            case "BTD":
+
+                return true;
             default:
                 System.out.println("Please try again");
                 return false;
